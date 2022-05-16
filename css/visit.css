@@ -13,7 +13,6 @@ a{
 #bgvideo{
     width:2000px;
     height: 100%;
-    overflow: hidden;
 }
 body::-webkit-scrollbar{
     width: 0;
@@ -23,6 +22,8 @@ header{
     position: fixed;
     top:50%;
     left: 50%;
+    transform: translate(-50%,-50%);
+    z-index: 10;
 }
 header a{
     background-color: #fff;
@@ -34,5 +35,4 @@ header a{
     opacity: 0.8;
     font-size: 2vw;
     border-radius: 15px;
-    transform: translate(-50%,-50%);
 }

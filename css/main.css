@@ -61,21 +61,73 @@ header{
     padding: 20px;
 }
 #container .item2 .item2_imgbox{
+    width: 100%;
+    height: 100%;
     display: flex;
+    flex-wrap: wrap;
     justify-content: center;
     overflow: hidden;
     
 }
-#container .item2 .item2_imgbox img{
+/* #container .item2 .item2_imgbox img{
     width: 700px;
     height: 330px;
-    
-}
+} */
 .skew1{
-    transform:skewX(-30deg);   
+    width: 1000px;
+    height: 330px;
+    transform:skewX(-30deg) translateX(-180px);
+    position: relative;
+    background-image: url(../img/surf1.jpg);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+.skew1::before{
+    content: '';
+    position: absolute;
+    text-align: right;
+    font-size: 30px;
+    top:0;
+    right: 0;
+    width: 0;
+    height: 100%;
+    background-color: rgba(0,0,0,0.7);
+    transition: all 1s ease-in-out;
+    box-sizing: border-box;
+    padding-top: 100px;
+    color: #fff;
+}
+.skew1:hover:before{
+    width: 100%;
 }
 .skew2{
-    transform:skewX(-30deg);
+    width: 1000px;
+    height: 330px;
+    transform:skewX(-30deg) translateX(180px);
+    position: relative;
+    background-image: url(../img/yacht1.jpg);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+.skew2::before{
+    content: '';
+    position: absolute;
+    text-align: left;
+    font-size: 30px;
+    top:0;
+    left: 0;
+    width: 0;
+    height: 100%;
+    background-color: rgba(0,0,0,0.7);
+    transition: all 1s ease-in-out;
+    box-sizing: border-box;
+    padding-top: 100px;
+    color: #fff;
+}
+.skew2:hover:before{
+    width: 100%;
 }
 footer{
     width: 100%;
