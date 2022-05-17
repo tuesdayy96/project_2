@@ -444,4 +444,24 @@ footer{
     .about .abouttext button:hover{
         opacity: 0.8;
     }
+    .maps{
+        text-align: center;
+        width: 100%;
+        height: 100%;
+        padding: 20px 0;
+    }
+    .maps h3{
+        margin: 40px auto;
+        font-size: 70px;
+    }
+    .maps img{
+        width: auto;
+        height: 100%;
+    }
+    .maps .mapsicon{
+        width: 80%;
+        height: 300px;
+        margin: 0 auto;
+        background-color: #fff;
+    }
 }
