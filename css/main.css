@@ -463,5 +463,6 @@ footer{
         height: 300px;
         margin: 0 auto;
         background-color: #fff;
+        box-shadow: 2px 2px 4px 3px #666;
     }
 }
