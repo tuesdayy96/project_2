@@ -4,9 +4,10 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Paradise-Surf beach</title>
     <link rel="stylesheet" href="css/main.css">
     <link rel="stylesheet" href="css/reset.css">
+    <link rel="icon" href="img/logo.png">
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -18,15 +19,26 @@
         <header>
             <div id="logobox">
                 <div id="logo"><a href="#"><img src="img/logo.png" alt="">Paradise</a></div>
-                <img src="img/menu.png" alt="" class="menu">
+                <img src="img/menu.png" alt="" class="menu" onclick="openbtn()">
             </div>
             <nav>
                 <ul class="nav_bar">
                     <li><a href="">HOME</a></li>
                     <li><a href="">ACTIVITY</a></li>
                     <li><a href="">ABOUT US</a></li>
-                    <li><a href="">CONTECT</a></li>
+                    <li><a href="">CONTACT</a></li>
                 </ul>
+
+                <div id="navtap" class="overlay">
+                    <a href="javascript:void(0)" class="closebtn" onclick="closebtn()">&times;</a>
+                    <div class="content">
+                        <a href="">HOME</a>
+                        <a href="">ACTIVITY</a>
+                        <a href="">ABOUT US</a>
+                        <a href="">CONTACT</a>
+                    </div>
+
+                </div>
             </nav>
         </header>
 
@@ -102,18 +114,84 @@
                     <div>
                         <img src="img/maps1.png" alt="">
                         <div class="mapsicon">
-                            <h4>Infomation</h4>
-                            <ul>
-                        
-                            </ul>
+                            <h4>INFOMATION</h4>
+                            <div class="mapsflex">
+                                <ul>
+                                    <li>
+                                        <img src="img/ferry.png" alt="">
+                                        <a href=""><span>Schedule</span></a>
+                                    </li>
+                                    <li>
+                                        <img src="img/bus.png" alt="">
+                                        <span>All routes run every 30 minutes.</span><br>
+                                        <span>Operating time<br> AM 06 : 00  ~ AM 00 : 00 </span>
+                                        <a href=""><span>Schedule</span></a>
+                                    </li>
+                                </ul>
+                                <ul>
+                                    <li>
+                                        <img src="img/resortcon.png" alt="">
+                                        <a href=""><span>SITE</span></a>
+                                    </li>
+                                    <li>
+                                        <img src="img/beachcon.png" alt="">
+                                        <a href=""><span>SITE</span></a>
+                                    </li>
+                                    <li>
+                                        <img src="img/surfcon.png" alt="">
+                                        <a href=""><span>SITE</span></a>
+                                    </li>
+                                </ul>
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
         <footer>
-
+            <div id="footerwrap">
+                <div class="footerbox">
+                    <img src="img/logo.png" alt="">
+                </div>
+                <div class="footerbox">
+                    <h3>CONTACT</h3>
+                    <ul>
+                        <li>Tel : XX)000-0000</li>
+                        <li>Mail : paradisesurf@pseudo.com</li>
+                        <li>Place : Paradise Island</li>
+                    </ul>
+                </div>
+                <div class="footerbox">
+                    <h3>HELPFUL LINKS</h3>
+                    <ul>
+                        <li><a href="">Reception</a></li>
+                        <li><a href="">Support</a></li>
+                        <li><a href="">Policy</a></li>
+                    </ul>
+                </div>
+                <div class="footerbox">
+                    <h3>INFOMATION</h3>
+                    <ul>
+                        <li><a href="">About us</a></li>
+                        <li><a href="">News</a></li>
+                        <li><a href="">Event</a></li>
+                    </ul>
+                </div>
+                <div class="footerbox">
+                    <h3>SUBSCRIBE</h3>
+                    <form action="#">
+                        <input type="email" placeholder="Enter your E-mail">
+                        <button>Send</button>
+                    </form>
+                    <ul class="footercon">
+                        <li><a href=""><img src="img/insta.png" alt=""></a></li>
+                        <li><a href=""><img src="img/facebook.png" alt=""></a></li>
+                        <li><a href=""><img src="img/youtube.png" alt=""></a></li>
+                    </ul>
+                </div>
+            </div>
         </footer>
     </div>
+    <script src="js/main.js"></script>
 </body>
 </html>
