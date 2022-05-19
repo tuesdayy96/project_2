@@ -39,8 +39,14 @@ header{
     background-repeat: no-repeat;
     background-position: center;
     background-attachment: fixed;
+    
 }
-
+#slide::before{
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+}
 footer{
     width: 100%;
     height: 100%;
@@ -117,6 +123,7 @@ footer{
         position: absolute;
         top:200px;
         left: 50px;
+        text-shadow: 3px 3px #ff69b4;
     }
     #slide .co1 h2{
         font-size: 10vw;
@@ -618,6 +625,7 @@ footer{
         position: absolute;
         top:200px;
         left: 50px;
+        text-shadow: 3px 3px #ff69b4;
     }
     #slide .co1 h2{
         font-size: 8vw;
@@ -1083,6 +1091,7 @@ footer{
         position: absolute;
         top:200px;
         left: 50px;
+        text-shadow: 3px 3px #ff69b4;
     }
     #slide .co1 h2{
         font-size: 8vw;
