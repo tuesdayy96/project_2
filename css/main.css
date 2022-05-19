@@ -1,6 +1,8 @@
 @charset "utf-8";
 
-
+body{
+    overflow-x: hidden;
+}
 body::-webkit-scrollbar{
     width: 0;
     height: 10px;
@@ -47,23 +49,6 @@ footer{
 .footerbox a:hover{
     text-decoration: underline;
 }
-.footerbox ul:not(.footercon) li:after{
-    content: '|';
-    margin: 0 8px;
-}
-/* @media screen and (max-width:583px) {
-    .footerbox{
-        width: 100%;
-        display: flex;
-        flex-direction: column;
-        justify-content: space-between;
-        align-items: center;
-        margin: 5px 0;
-    }
-    .footerbox ul{
-        display: flex;
-    }
-} */
 @media screen and (max-width:600px) {
     header{
         width: 100%;
@@ -551,7 +536,7 @@ footer{
     .footerbox{
         width: 100%;
         display: flex;
-        flex-wrap: wrap;
+        flex-direction: column;
         justify-content: space-between;
         align-items: center;
         margin: 5px 0;
@@ -565,7 +550,6 @@ footer{
     .footerbox ul li{
         font-size: 12px;
     }
-    
     .footerbox a{
         color: #333;
     }
@@ -589,11 +573,15 @@ footer{
         width: 30px;
         height: 30px;
     }
+    .footerbox ul:not(.footercon) li:after{
+        content: '|';
+        margin: 0 8px;
+    }
 }
 
 /* -------------------------------------------------------------------------- */
 
-@media screen and (min-width:601px) {
+@media (min-width:601px) and (max-width:1259px)  {
     header{
         position: absolute;
         width: 100%;
@@ -734,9 +722,10 @@ footer{
     .skew1 p{
         position: absolute;
         color:#fff;
+        top:15%;
         right: 5%;
         opacity:0;
-        font-size: 10rem;
+        font-size: 15vw;
         transition: all 0.2s ease-in-out;
         font-family: 'Rubik Glitch', cursive;
     }
@@ -774,9 +763,10 @@ footer{
     .skew2 p{
         position: absolute;
         color:#fff;
-        left: 30px;
+        top:15%;
+        left: 5%;
         opacity:0;
-        font-size: 10rem;
+        font-size: 15vw;
         transition: all 0.2s ease-in-out;
         font-family: 'Rubik Glitch', cursive;
     }
@@ -788,7 +778,6 @@ footer{
         content: '';
         position: absolute;
         text-align: left;
-        font-size: 30px;
         top:0;
         left: 0;
         width: 0;
@@ -806,12 +795,13 @@ footer{
         width: 100%;
         height: 100%;
         display: flex;
+        flex-wrap: wrap;
         justify-content: center;
         overflow: hidden;
     }
     
     .skew3{
-        width: 600px;
+        width: 90vw;
         height: 330px;
         position: relative;
         background-image: url(../img/beach1.jpg);
@@ -838,36 +828,20 @@ footer{
     .skew3::before{
         content: '';
         position: absolute;
-        top:-140px;
-        left: -120px;
-        width: 700px;
-        height: 0;
+        top: 0;
+        left: 50%;
+        width: 0%;
+        height: 100%;
         background-color: rgba(0, 0, 0, 0.7);
-        transform: rotate(150deg);
-        transition: all 0.3s ease-out;
-        
-    }
-    .skew3::after{
-        content: '';
-        position: absolute;
-        bottom:-154px;
-        right: -130px;
-        width: 700px;
-        height: 0;
-        background-color: rgba(0, 0, 0, 0.7);
-        transform: rotate(150deg);
         transition: all 0.3s ease-out;
     }
     .skew3:hover::before{
-        height: 100%;
+        width: 100%;
         transition: all 0.3s ease-out;
     }
-    .skew3:hover::after{
-        height: 100%;
-        transition: all 0.3s ease-out;
-    }
+  
     .skew4{
-        width: 600px;
+        width: 90vw;
         height: 330px;
         position: relative;
         background-image: url(../img/resort.jpg);
@@ -894,32 +868,14 @@ footer{
     .skew4::before{
         content: '';
         position: absolute;
-        top:-140px;
-        left: -120px;
-        width: 700px;
-        height: 0;
+        right: 50%;
+        width: 0;
+        height: 100%;
         background-color: rgba(0, 0, 0, 0.7);
-        transform: rotate(150deg);
-        transition: all 0.3s ease-out;
-        
-    }
-    .skew4::after{
-        content: '';
-        position: absolute;
-        bottom:-154px;
-        right: -130px;
-        width: 700px;
-        height: 0;
-        background-color: rgba(0, 0, 0, 0.7);
-        transform: rotate(150deg);
         transition: all 0.3s ease-out;
     }
     .skew4:hover::before{
-        height: 100%;
-        transition: all 0.3s ease-out;
-    }
-    .skew4:hover::after{
-        height: 100%;
+        width: 100%;
         transition: all 0.3s ease-out;
     }
     .about{
@@ -981,7 +937,7 @@ footer{
         height: 100%;
     }
     .maps .mapsicon{
-        width: 80%;
+        width: 95%;
         height: 300px;
         margin: 0 auto;
         background-color: #fff;
@@ -1006,7 +962,8 @@ footer{
         align-items: flex-start;
         padding: 15px;
         text-align: left;
-        font-size: 20px;
+        white-space: nowrap;
+        font-size: 2vw;
     }
     .mapsflex ul li img{
         width: 80px;
@@ -1054,7 +1011,8 @@ footer{
         margin: 10px 0;
     }
     .footerbox ul li{
-        padding: 5px;
+        padding: 5px 0;
+        white-space: nowrap;
     }
         
     .footerbox a{
@@ -1073,11 +1031,16 @@ footer{
     }
     .footercon{
         display: flex;
+        justify-content: center;
     }
     .footercon img{
         margin: 5px 10px;
         width: 30px;
         height: 30px;
+    }
+    .footerbox ul:not(.footercon) li:after{
+        content: '|';
+        margin: 0 8px;
     }
 }
 
@@ -1529,6 +1492,10 @@ footer{
         display: flex;
         justify-content: space-evenly;
         align-items: center;
+    }
+    .footerbox{
+        display: flex;
+        flex-direction: column;
     }
     .footerbox h3{
         font-size: 25px;

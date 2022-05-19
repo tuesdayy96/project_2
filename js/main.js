@@ -1,7 +1,7 @@
 var tap = document.getElementById('navtap');
 
 function openbtn(){
-    tap.style.width = '90%';
+    tap.style.width = '100%';
 }
 function closebtn(){
     tap.style.width = '0';
