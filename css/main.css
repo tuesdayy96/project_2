@@ -5,7 +5,6 @@ body{
 }
 body::-webkit-scrollbar{
     width: 0;
-    height: 10px;
 }
 body::-webkit-scrollbar-thumb{
     background-color: #e68405;
@@ -14,12 +13,13 @@ body::-webkit-scrollbar-thumb{
     border: 1px solid #fff;
 }
 body::-webkit-scrollbar-track{
-    background-color: transparent
+    background-color: transparent;
 }
 header{
     height: 100px;
-    font-size: 18px;
+    font-size: 16px;
     font-weight: 600;
+    white-space: nowrap;
 }
 #logobox img{
     width: 36px;
@@ -38,14 +38,7 @@ header{
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
-    background-attachment: fixed;
-    
-}
-#slide::before{
-    content: '';
-    position: absolute;
-    width: 100%;
-    height: 100%;
+    background-attachment: fixed;   
 }
 footer{
     width: 100%;
@@ -56,66 +49,6 @@ footer{
     text-decoration: underline;
 }
 @media screen and (max-width:600px) {
-    header{
-        width: 100%;
-        position: absolute;
-        top:0;
-        left: 0;
-        color: #fff;
-        z-index: 10;
-    }
-    header #logobox{
-        display: flex;
-        justify-content: space-between;
-        background-color: rgba(0,0,0,0.9);
-        align-items: center;
-        padding: 10px;
-    }
-    .nav_bar{
-        display: none;
-    }
-    .nav_bar li{
-        padding: 15px;
-        
-    }
-    .nav_bar a{
-        color:#333;
-    }
-    .overlay{
-        position: fixed;
-        z-index: 1000;
-        overflow-x: hidden;
-        top:0;
-        right: 0;
-        height: 100%;
-        width: 0;
-        background-color: rgba(0,0,0,0.9);
-        transition: all 0.5s ease;
-    }
-    .overlay .closebtn{
-        position: absolute;
-        right: 2%;
-        font-size: 70px;
-        color:#818181;
-    }
-    .overlay .content{
-        display: block;
-        width: 100%;
-        position: relative;
-        top:25%;
-    }
-    .overlay .content a{
-        color:#818181;
-        font-size: 30px;
-        font-weight: 900;
-        display: block;
-        text-align: center;
-        transition: all 0.3s ease;
-        padding: 15px; 
-    }
-    .overlay .content a:hover{
-        color:#fff;
-    }
     #slide{
         position: relative;
     }
@@ -204,7 +137,7 @@ footer{
         text-align: center;
         font-size: 70px;
         padding: 20px;
-        margin: 30px;
+        margin: 30px 0;
     }
     #container .item2 .item2_imgbox{
         width: 100%;
@@ -317,10 +250,11 @@ footer{
     .skew3 p{
         position: absolute;
         color:#fff;
-        top:10%;
-        right: 10%;
+        top:50%;
+        left: 50%;
+        transform: translate(-50%,-50%);
         opacity:0;
-        font-size: 10rem;
+        font-size: 5rem;
         transition: all 0.2s ease-in-out;
         font-weight: 900;
         z-index: 10;
@@ -372,10 +306,11 @@ footer{
     .skew4 p{
         position: absolute;
         color:#fff;
-        top:14%;
-        left: 10%;
+        top:50%;
+        left: 50%;
         opacity:0;
-        font-size: 9rem;
+        transform: translate(-50%,-50%);
+        font-size: 5rem;
         transition: all 0.2s ease-in-out;
         font-weight: 900;
         z-index: 10;
@@ -438,8 +373,7 @@ footer{
         top:20%;
         text-align: center;
         color: transparent;
-        text-shadow:2px 2px 0.8px#fff,
-        3px 3px 3px aliceblue;
+        text-shadow:2px 2px #fff;
 
     }
     .about .abouttext h3{
@@ -531,93 +465,11 @@ footer{
     .mapsflex ul li a span:hover{
         opacity: 0.8;
     }
-    #footerwrap{
-        width: 100%;
-        height: 100%;
-        margin: 0 auto;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-    }
-    .footerbox{
-        width: 100%;
-        display: flex;
-        flex-direction: column;
-        justify-content: space-between;
-        align-items: center;
-        margin: 5px 0;
-    }
-    .footerbox ul{
-        display: flex;
-    }
-    .footerbox h3{
-        font-size: 25px;
-    }
-    .footerbox ul li{
-        font-size: 12px;
-    }
-    .footerbox a{
-        color: #333;
-    }
-    
-    .footerbox input{
-        padding: 5px;
-    }
-    .footerbox button{
-        display: inline-block;
-        background-color: #e68405;
-        color: #fff;
-        padding: 5px;
-        cursor: pointer;
-        border: none;
-    }
-    .footercon{
-        display: flex;
-    }
-    .footercon img{
-        margin: 5px 10px;
-        width: 30px;
-        height: 30px;
-    }
-    .footerbox ul:not(.footercon) li:after{
-        content: '|';
-        margin: 0 8px;
-    }
 }
 
 /* -------------------------------------------------------------------------- */
 
 @media (min-width:601px) and (max-width:1259px)  {
-    header{
-        position: absolute;
-        width: 100%;
-        top:0;
-        left: 0;
-        display: flex;
-        justify-content: space-around;
-        align-items: center;
-        background-color: rgba(0,0,0,0.8);
-        z-index: 10;
-    }
-    #logo{
-        color:#fff;
-    }
-    .menu{
-        display:none;
-    }
-    .nav_bar{
-        display: flex;
-    }
-    .nav_bar li{
-        padding: 15px;
-    }
-    .nav_bar li a{
-        color:#fff;
-    }
-    .overlay{
-        display: none;
-    }
     #slide{
         position: relative;
     }
@@ -997,93 +849,11 @@ footer{
     .mapsflex ul li a span:hover{
         opacity: 0.8;
     }
-    #footerwrap{
-        width: 90%;
-        height: 100%;
-        margin: 0 auto;
-        display: flex;
-        flex-direction: column;
-        justify-content: space-evenly;
-        align-items: center;
-        text-align: center;
-    }
-    .footerbox{
-        display: flex;
-        flex-direction: column;
-    }
-    .footerbox ul{
-        display: flex;
-    }
-    .footerbox h3{
-        font-size: 25px;
-        margin: 10px 0;
-    }
-    .footerbox ul li{
-        padding: 5px 0;
-        white-space: nowrap;
-    }
-        
-    .footerbox a{
-        color: #333;
-    }
-    .footerbox input{
-        padding: 5px;
-    }
-    .footerbox button{
-        display: inline-block;
-        background-color: #e68405;
-        color: #fff;
-        padding: 5px;
-        cursor: pointer;
-        border: none;
-    }
-    .footercon{
-        display: flex;
-        justify-content: center;
-    }
-    .footercon img{
-        margin: 5px 10px;
-        width: 30px;
-        height: 30px;
-    }
-    .footerbox ul:not(.footercon) li:after{
-        content: '|';
-        margin: 0 8px;
-    }
 }
 
 /* ------------------------------------------------------- */
 
 @media screen and (min-width:1260px) {
-    header{
-        position: absolute;
-        width: 100%;
-        top:0;
-        left: 0;
-        display: flex;
-        justify-content: space-around;
-        align-items: center;
-        background-color: rgba(0,0,0,0.8);
-        z-index: 10;
-    }
-    #logo{
-        color:#fff;
-    }
-    .menu{
-        display:none;
-    }
-    .nav_bar{
-        display: flex;
-    }
-    .nav_bar li{
-        padding: 15px;
-    }
-    .nav_bar li a{
-        color:#fff;
-    }
-    .overlay{
-        display: none;
-    }
     #slide{
         position: relative;
     }
@@ -1494,46 +1264,5 @@ footer{
     .mapsflex ul li a span:hover{
         opacity: 0.8;
     }
-    #footerwrap{
-        width: 1140px;
-        height: 100%;
-        margin: 0 auto;
-        display: flex;
-        justify-content: space-evenly;
-        align-items: center;
-    }
-    .footerbox{
-        display: flex;
-        flex-direction: column;
-    }
-    .footerbox h3{
-        font-size: 25px;
-        margin: 10px 0;
-    }
-    .footerbox ul li{
-        padding: 5px;
-    }
-        
-    .footerbox a{
-        color: #333;
-    }
-    .footerbox input{
-        padding: 5px;
-    }
-    .footerbox button{
-        display: inline-block;
-        background-color: #e68405;
-        color: #fff;
-        padding: 5px;
-        cursor: pointer;
-        border: none;
-    }
-    .footercon{
-        display: flex;
-    }
-    .footercon img{
-        margin: 5px 10px;
-        width: 30px;
-        height: 30px;
-    }
+
 }
