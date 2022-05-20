@@ -1,5 +1,55 @@
 @charset "utf-8";
 
+body{
+    overflow-x: hidden;
+}
+#slide{
+    position: relative;
+    width: 100vw;
+    height: 100vh;
+    background-image: url(../img/resort/east.jpg);
+    background-size: cover;
+    background-position: 50% 50%;
+}
+#slide .gradi{
+    position: absolute;
+    width: 100%;
+    height: 50px;
+    bottom: 0;
+    left: 0;
+    background: linear-gradient(to bottom,
+            rgba(0, 0, 0, 0) 50%,
+            rgba(0, 0, 0, 0.4) 70%,
+            rgba(0, 0, 0, 0.7) 80%,
+            rgb(0, 0, 0, 1) 100%),
+            transparent;
+}
+#slide .resort_btn{
+    position: absolute;
+    right: 10%;
+    bottom: 10%;
+}
+#slide .resort_btn a{
+    font-size: 4rem;
+    color:#fff;
+    margin: 10px;
+}
+#slide .resort_btn div{
+    position: relative;
+    padding: 10px;
+}
+#slide .resort_btn a div::after{
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 0;
+    border-bottom: 3px solid #e68405;
+    transition: all 1s ease;
+}
+#slide .resort_btn a div:hover::after{
+    width: 100%;
+}
 #container{
     width: 100%;
     height: 1000px;
