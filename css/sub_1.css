@@ -52,5 +52,169 @@ body{
 }
 #container{
     width: 100%;
-    height: 1000px;
+    height: 100%;
+    background-color: #f9f8ed;
+    padding: 20px;
+}
+.east_wrap > h2{
+    font-size: 6vw;
+}
+.east_wrap .rooms{
+    width: 90%;
+    margin: 40px auto;
+}
+.east_wrap .rooms h3{
+    font-size: 3vw;
+    margin: 20px 0;
+    text-align: center;
+}
+.east_wrap .rooms .rooms_x{
+    display: flex;
+    justify-content: space-around;
+}
+.rooms_delux, .rooms_suite{
+    width: 400px;
+    height: 600px;
+    box-shadow: 0 0 2px #666;
+    display: flex;
+    flex-direction: column;
+}
+.rooms_delux div, .rooms_suite div{
+    width: 400px;
+    height: 400px;
+    background-color: rgba(255,255,255,0.7);
+    transition: all 0.5s linear;
+}
+.rooms_x h4{
+    font-size: 30px;
+    padding: 15px;
+}
+.rooms_x p, .rooms_x span{
+    font-size: 20px;
+    padding: 15px;
+    color:#999999;
+}
+.east_wrap .rooms_x img{
+    width: 100%;
+    height: 400px;
+    opacity: 0.8;
+    transition: all 0.5s linear;
+}
+.rooms .room_service{
+    text-align: center;
+    width: 100%;
+    margin: 0 auto;
+}
+.rooms .room_service h4{
+    font-size: 25px;
+    margin: 40px;
+}
+.rooms .room_service ul{
+    display: flex;
+    justify-content: center;
+}
+.rooms .room_service ul li{
+    margin: 0 20px;
+    width: 100%;
+}
+.rooms .room_service ul li span{
+    display: block;
+}
+.rooms .room_service img{
+    width: 64px;
+    height: 64px
+}
+.resort_content{
+    width: 1140px;
+    margin: 60px auto;
+}
+.resort_content h2{
+    font-size: 4vw;
+}
+.resort_content .restau{
+    width: 100%;
+    height: 500px;
+    position: relative;
+    margin: 40px 0;
+}
+.resort_content .restau img{
+    position: absolute;
+    left: 50px;
+    width: 600px;
+    height: 100%;
+    border-radius: 4px;
+}
+.resort_content .restau .restau_text{
+    width: 500px;
+    height: 400px;
+    background-color: rgba(255,255,255,1);
+    position: absolute;
+    top: 50px;
+    right: 100px;
+    box-shadow: -2px 2px 3px #333;
+    border-radius: 4px;
+    padding: 50px;
+    box-sizing: border-box;
+}
+.resort_content .restau .restau_text h4{
+    font-size: 30px;
+    font-weight: 400;
+}
+.resort_content .infinity{
+    width: 100%;
+    height: 500px;
+    position: relative;
+    margin: 40px 0;
+}
+.resort_content .infinity img{
+    position: absolute;
+    right: 100px;
+    width: 600px;
+    height: 100%;
+    border-radius: 4px;
+}
+.resort_content .infinity .infinity_text{
+    width: 500px;
+    height: 400px;
+    background-color: rgba(255,255,255,1);
+    position: absolute;
+    top: 50px;
+    left: 50px;
+    box-shadow: 2px 2px 3px #333;
+    border-radius: 4px;
+    padding: 50px;
+    box-sizing: border-box;
+}
+.resort_content .infinity .infinity_text h4{
+    font-size: 30px;
+    font-weight: 400;
+}
+.resort_content .lounge{
+    width: 100%;
+    height: 500px;
+    position: relative;
+    margin: 40px 0;
+}
+.resort_content .lounge img{
+    position: absolute;
+    left: 50px;
+    width: 600px;
+    height: 100%;
+    border-radius: 4px;
+}
+.resort_content .lounge .lounge_text{
+    width: 500px;
+    height: 400px;
+    background-color: rgba(255,255,255,1);
+    position: absolute;
+    top: 50px;
+    right: 100px;
+    box-shadow: 2px 2px 3px #333;
+    border-radius: 4px;
+    padding: 50px;
+    box-sizing: border-box;
+}
+.resort_content .lounge .lounge_text h4{
+    font-size: 30px;
+    font-weight: 400;
 }

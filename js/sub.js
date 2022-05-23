@@ -26,3 +26,35 @@ var locate = document.getElementById('container').offsetTop;
 east.onclick = function scroll_east(){
     window.scrollTo({top:locate,behavior:"smooth"});
 }
+
+// 룸 호버
+var r_x = document.querySelector('.rooms_x');
+var r_delux = document.querySelector('.rooms_delux');
+var r_suite = document.querySelector('.rooms_suite');
+var r_img = r_x.getElementsByTagName('img');
+
+function r_hover1(){
+    r_img[0].style.opacity = 1;
+    r_delux.getElementsByTagName('div')[0].style.backgroundColor = '#333';
+    r_delux.getElementsByTagName('h4')[0].style.color = '#fff';
+}
+function r_hover2(){
+    r_img[1].style.opacity = 1;
+    r_suite.getElementsByTagName('div')[0].style.backgroundColor = '#333';
+    r_suite.getElementsByTagName('h4')[0].style.color = '#fff';
+}
+function r_hoverOut(){
+    r_img[0].style.opacity = 0.7;
+    r_img[1].style.opacity = 0.7;
+    r_delux.getElementsByTagName('div')[0].style.backgroundColor = '#fff';
+    r_delux.getElementsByTagName('h4')[0].style.color = '#333';
+    r_suite.getElementsByTagName('div')[0].style.backgroundColor = '#fff';
+    r_suite.getElementsByTagName('h4')[0].style.color = '#333';
+}
+function room(){
+r_delux.addEventListener('mouseover',r_hover1);
+r_suite.addEventListener('mouseover',r_hover2);
+r_delux.addEventListener('mouseleave',r_hoverOut);
+r_suite.addEventListener('mouseleave',r_hoverOut);
+}
+room();
