@@ -54,6 +54,8 @@ body{
     width: 100%;
     height: 100%;
     background-color: #f9f8ed;
+}
+.east_wrap{
     padding: 20px;
 }
 .east_wrap > h2{
@@ -145,12 +147,12 @@ body{
     border-radius: 4px;
 }
 .resort_content .restau .restau_text{
-    width: 500px;
-    height: 400px;
+    width: 400px;
+    height: 300px;
     background-color: rgba(255,255,255,1);
     position: absolute;
     top: 50px;
-    right: 100px;
+    right: 150px;
     box-shadow: -2px 2px 3px #333;
     border-radius: 4px;
     padding: 50px;
@@ -174,12 +176,12 @@ body{
     border-radius: 4px;
 }
 .resort_content .infinity .infinity_text{
-    width: 500px;
-    height: 400px;
+    width: 400px;
+    height: 300px;
     background-color: rgba(255,255,255,1);
     position: absolute;
     top: 50px;
-    left: 50px;
+    left: 100px;
     box-shadow: 2px 2px 3px #333;
     border-radius: 4px;
     padding: 50px;
@@ -203,13 +205,13 @@ body{
     border-radius: 4px;
 }
 .resort_content .lounge .lounge_text{
-    width: 500px;
-    height: 400px;
+    width: 400px;
+    height: 300px;
     background-color: rgba(255,255,255,1);
     position: absolute;
     top: 50px;
-    right: 100px;
-    box-shadow: 2px 2px 3px #333;
+    right: 150px;
+    box-shadow: -2px 2px 3px #333;
     border-radius: 4px;
     padding: 50px;
     box-sizing: border-box;
@@ -217,4 +219,55 @@ body{
 .resort_content .lounge .lounge_text h4{
     font-size: 30px;
     font-weight: 400;
+}
+.count{
+    width: 100%;
+    height: 150px;
+    background-color: #333;
+}
+.count ul{
+    height: 100%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    text-align: center;
+}
+.count p{
+    color:#c5a880;
+    font-size: 35px;
+}
+.count span{
+    color: #ddd;
+}
+.gallery{
+    width: 1000px;
+    text-align: center;
+    margin: 0 auto;
+}
+.gallery h4{
+    font-size: 40px;
+    margin: 40px 0;
+}
+.slide_wrap{
+    width: 100%;
+    margin: 0 auto;
+    height: 300px;
+}
+.slides{
+    position: relative;
+    width: 1200px;
+    height: 300px;
+    overflow: hidden;
+    display: flex;
+    margin: 0 auto;
+}
+.slides a{
+    position: absolute;
+    width: 300px;
+    height: 100%;
+    margin: 0 5px;
+}
+.slides a img{
+    width: 100%;
+    height: 100%;
 }
