@@ -251,6 +251,9 @@ footer{
     .overlay{
         display: none;
     }
+    footer{
+        padding: 15px;
+    }
     #footerwrap{
         width: 1140px;
         height: 100%;

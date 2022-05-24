@@ -23,7 +23,7 @@ hovers();
 // 클릭 시 스크롤 이동
 var locate = document.getElementById('container').offsetTop;
 
-east.onclick = function scroll_east(){
+function scroll_a(){
     window.scrollTo({top:locate,behavior:"smooth"});
 }
 
@@ -95,3 +95,17 @@ function rollingStart(){
         }
     },10);
 }
+
+// 페이드 인
+$(document).ready(function(){
+    $(window).scroll(function(){
+        $('.fadein').each(function(){
+            var bottom_element = $(this).offset().top + $(this).outerHeight();
+            var bottom_window = $(window).scrollTop() + $(window).height();
+            if(bottom_window > bottom_element){
+                $(this).animate({'opacity':'1'},999);
+            }
+        });
+        
+    });
+});
