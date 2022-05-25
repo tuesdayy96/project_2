@@ -3,6 +3,21 @@
 body{
     overflow-x: hidden;
 }
+#topbtn{
+    position: fixed;
+    right: 30px;
+    bottom: 30px;
+    width: 50px;
+    height: 50px;
+    background-color: #333;
+    color: #fff;
+    text-transform: uppercase;
+    box-sizing: border-box;
+    text-align: center;
+    line-height: 50px;
+    opacity: 0;
+    z-index: 100;
+}
 #slide{
     position: relative;
     width: 100vw;
@@ -227,14 +242,11 @@ body{
     font-size: 30px;
     font-weight: 400;
 }
-.resort_content > div{
-    margin: 200px 0;
-}
 .count{
     width: 100%;
     height: 150px;
     background-color: #333;
-    margin: 100px 0;
+    
 }
 .count ul{
     height: 100%;
@@ -285,4 +297,8 @@ body{
 .slides a img{
     width: 100%;
     height: 100%;
+}
+.fadein{
+    opacity: 0;
+    margin-top: 300px;
 }

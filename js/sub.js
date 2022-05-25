@@ -95,3 +95,40 @@ function rollingStart(){
         }
     },10);
 }
+
+// 스크롤 이벤트
+
+var scroll_item = document.getElementsByClassName('fadein');
+function scrollmove(){
+    for(var i=0;i<scroll_item.length;i++){
+        if(window.scrollY > scroll_item[i].offsetTop-700){
+            scroll_item[i].style.opacity = '1';
+            scroll_item[i].style.marginTop = '100px';
+            scroll_item[i].style.transition = 'all 0.4s ease';
+        } else if(window.innerHeight < scroll_item[i].offsetTop){
+            scroll_item[i].style.opacity = '0';
+            scroll_item[i].style.marginTop = '300px';
+            scroll_item[i].style.transition = 'all 0.4s ease';
+        }
+    }
+}
+window.addEventListener('scroll',scrollmove);
+
+var ft = document.querySelector('footer');
+function scroll_top(){
+    if(window.scrollY >= 940){
+        topbtn.style.opacity = '1';
+        topbtn.style.transition = 'all 1s ease';
+        if(window.scrollY >= (ft.offsetTop - window.outerHeight)){
+                topbtn.style.opacity = '0';
+                topbtn.style.transition = 'all 1s ease';
+        }
+    } else {
+        topbtn.style.opacity = '0';
+        topbtn.style.transition = 'all 1s ease';
+    }
+}
+function scrolltotop(){
+   window.scrollTo({top:0,left:0,behavior:'smooth'});
+}
+window.addEventListener('scroll',scroll_top);
