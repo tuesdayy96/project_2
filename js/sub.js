@@ -2,15 +2,15 @@
 var main = document.getElementById('slide');
 var resort = document.querySelectorAll('.resort_btn div');
 function east_r(){
-    main.style.backgroundImage = "url(../img/resort/east.jpg)";
+    main.style.backgroundImage = "url(img/resort/east.jpg)";
     main.style.transition = "all 1s ease-in-out";
 }
 function south_r(){
-    main.style.backgroundImage = "url(../img/resort/south.jpg)";
+    main.style.backgroundImage = "url(img/resort/south.jpg)";
     main.style.transition = "all 1s ease-in-out";
 }
 function west_r(){
-    main.style.backgroundImage = "url(../img/resort/west.jpg)";
+    main.style.backgroundImage = "url(img/resort/west.jpg)";
     main.style.transition = "all 1s ease-in-out";
 }
 function hovers(){
@@ -95,17 +95,3 @@ function rollingStart(){
         }
     },10);
 }
-
-// 페이드 인
-$(document).ready(function(){
-    $(window).scroll(function(){
-        $('.fadein').each(function(){
-            var bottom_element = $(this).offset().top + $(this).outerHeight();
-            var bottom_window = $(window).scrollTop() + $(window).height();
-            if(bottom_window > bottom_element){
-                $(this).animate({'opacity':'1'},999);
-            }
-        });
-        
-    });
-});
