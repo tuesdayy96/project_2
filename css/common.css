@@ -99,6 +99,10 @@ footer{
         align-items: center;
         margin: 5px 0;
     }
+    #info1{
+        flex-direction: column;
+        text-align: center;
+    }
     .footerbox ul{
         display: flex;
     }

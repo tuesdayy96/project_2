@@ -21,7 +21,7 @@ function hovers(){
 hovers();
 
 // 클릭 시 스크롤 이동
-var locate = document.getElementById('container').offsetTop;
+var locate = document.getElementById('scrollpoint').offsetTop;
 
 function scroll_a(){
     window.scrollTo({top:locate,behavior:"smooth"});

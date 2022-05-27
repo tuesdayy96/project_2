@@ -36,3 +36,12 @@ header a{
     font-size: 2vw;
     border-radius: 15px;
 }
+@media screen and (max-width:600px) {
+    body{
+        overflow:hidden;
+    }
+    #bgvideo{
+        width: 2000px;
+        height: 100%;
+    }
+}
