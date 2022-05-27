@@ -414,7 +414,7 @@ body{
         font-family: 'Merriweather', serif;
     }
     .resort_content h2{
-        font-size: 4vw;
+        font-size: 4rem;
     }
     .resort_content .restau{
         width: 100%;
@@ -462,7 +462,7 @@ body{
         background-color: rgba(255,255,255,1);
         position: absolute;
         bottom: -15%;
-        left:15%;
+        left:100px;
         box-shadow: 2px 2px 3px #333;
         border-radius: 4px;
         padding: 50px;
