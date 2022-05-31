@@ -19,7 +19,7 @@ function initslide(){
     slides.style.left = -(s_Width + s_Margin) + 'px';
 }
 next_btn.addEventListener('click',function(){
-    if(idx < slideIdx - 1){
+    if(idx <= slideIdx - 1){
         slides.style.left = -(idx + 2) * (s_Width + s_Margin) + 'px';
         slides.style.transition = '0.5s ease-out';
     }
@@ -45,4 +45,18 @@ prev_btn.addEventListener('click',function(){
         idx = slideIdx;
     }
     idx -=1; 
+})
+
+// test
+var datelocal = document.getElementById('date');
+var today = new Date();
+datelocal.Value = today.getDate();
+
+
+// 애니메이션이 끝나면
+
+var surf = document.querySelector('.path1');
+var anibox = document.querySelector('.animate');
+surf.addEventListener('animationend',function(){
+
 })
