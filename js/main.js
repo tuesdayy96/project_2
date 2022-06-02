@@ -20,6 +20,7 @@ function scroll_top(){
         topbtn.style.opacity = '0';
         topbtn.style.transition = 'all 1s ease';
     }
+    
 }
 function scrolltotop(){
    window.scrollTo({top:0,left:0,behavior:'smooth'});

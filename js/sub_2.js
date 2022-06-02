@@ -4,7 +4,7 @@ var idx = 0;
 var slideIdx = slideImg.length;
 var prev_btn = document.getElementById('prev');
 var next_btn = document.getElementById('next');
-s_Width = 600;
+var s_Width = 600;
 s_Margin = 50;
 makeClone();
 initslide();
@@ -47,16 +47,15 @@ prev_btn.addEventListener('click',function(){
     idx -=1; 
 })
 
-// test
-var datelocal = document.getElementById('date');
-var today = new Date();
-datelocal.Value = today.getDate();
-
-
 // 애니메이션이 끝나면
 
+var surfer = document.querySelector('.surfer');
 var surf = document.querySelector('.path1');
-var anibox = document.querySelector('.animate');
+var book =document.querySelector('.booking');
 surf.addEventListener('animationend',function(){
-
+    surfer.style.left = '20%';
+    book.style.opacity = '1';
+    book.style.top = '250px';
+    secondbox.style.display = 'block';
+    container.style.backgroundImage = 'url(../img/activity/sub_bg.jpg)';
 })

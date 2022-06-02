@@ -48,7 +48,7 @@
 
         <div id="container">
             <div class="animate">
-                <svg class="suffer" version="1.0" xmlns="http://www.w3.org/2000/svg"
+                <svg class="surfer" version="1.0" xmlns="http://www.w3.org/2000/svg"
                 width="1210.000000pt" height="1280.000000pt" viewBox="0 0 1210.000000 1280.000000"
                 preserveAspectRatio="xMidYMid meet">
                <metadata>
@@ -129,27 +129,32 @@
                <div class="booking">
                    <form action="#">
                         <h2>BOOK NOW</h2>
+                            <div class="names">
+                                <label for="lname">
+                                    <span>Last-name</span><input id="lname" type="text" placeholder="">
+                                </label>
+                                <label for="fname">
+                                    <span>First-name</span><input id="fname" type="text">
+                                </label>
+                            </div>
+                        <label for="age">Age
+                            <input type="text" name="age" id="age" maxlength="3">
+                        </label>
                         <label for="email">E-mail
                             <input type="email" id="email" value="" placeholder="">
+                        </label>
+                        <label for="date">Reservation Date<br>
+                            <input id="date" type="text" placeholder="YYYY-MM-DD" onfocus="type='date'" width="100px"><br>
+                            <input id="date" type="text" placeholder="00:00" onfocus="type='time'" width="100px">
                         </label><br>
-                        <label for="date">Reservation
-                            <input id="date" type="date">
-                            <input type="time">
-                        </label><br>
-                        <div class="names">
-                            <label for="lname">
-                                <span>Last-name</span><input id="lname" type="text" placeholder="">
-                            </label>
-                            <label for="fname">
-                                <span>First-name</span><input id="fname" type="text">
-                            </label>
-                        </div>
+                        
                         <button id="send">Confirm</button>
                    </form>
                </div>
             </div>
-            <div id="slide_wrap">
-                <div class="slide_inner">
+            <div id="secondbox">
+                <div id="slide_wrap">
+                    <div class="slide_inner">
                         <ul class="slide">
                             <li><img src="img/activity/slide1.jpg" alt=""></li>
                             <li><img src="img/activity/slide2.jpg" alt=""></li>
@@ -160,8 +165,22 @@
                             <span id="prev">&lt;</span>
                             <span id="next">&gt;</span>
                         </p>
+                    </div>
                 </div>
-                
+                <div class="profile">
+                    <div>
+                        <img src="" alt="">
+                    </div>
+                    <div>
+                        <img src="" alt="">
+                    </div>
+                    <div>
+                        <img src="" alt="">
+                    </div>
+                    <div>
+                        <img src="" alt="">
+                    </div>
+                </div>
             </div>
         </div>
 
