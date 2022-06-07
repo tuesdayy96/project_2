@@ -87,23 +87,23 @@ body{
     padding: 15px;
 }
 
-.intro{
+#section1{
     width: 1140px;
     height: 100%;
     padding: 20px;
     margin: 20px auto;
     background-color: #fff;
 }
-.intro svg{
+#section1 svg{
     width: 100%;
     height: 100%;
 }
-.intro .path2{
+#section1 .path2{
     fill: none;
     stroke: #000;
 }
 
-#slide_wrap{
+#section2{
     width: 100%;
     height: 600px;
     margin: 0px auto;
@@ -217,4 +217,20 @@ body{
 .profile .flipCard img{
     width: 100%;
     height: 400px;
+}
+.other{
+    width: 100%;
+    height: 600px;
+    display: flex;
+}
+.other1, .other2{
+    width: 100%;
+    height: 100%;
+    border:1px solid #fff;
+}
+#secondbox h3{
+    text-align: center;
+    color: #fff;
+    font-size: 4rem;
+    margin: 1rem;
 }

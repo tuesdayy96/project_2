@@ -63,7 +63,7 @@ surf.addEventListener('animationend',function(){
 
 // 스크롤 애니메이션
 
-const intro = document.querySelector('.intro');
+const intro = document.querySelector('#section1');
 const path2 = document.querySelector('.path2');
 const path2Length = path2.getTotalLength();
 
