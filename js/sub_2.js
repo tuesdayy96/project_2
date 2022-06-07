@@ -51,11 +51,34 @@ prev_btn.addEventListener('click',function(){
 
 var surfer = document.querySelector('.surfer');
 var surf = document.querySelector('.path1');
-var book =document.querySelector('.booking');
+var book = document.querySelector('.booking');
+var anibox = document.querySelector('.animate') 
 surf.addEventListener('animationend',function(){
     surfer.style.left = '20%';
     book.style.opacity = '1';
     book.style.top = '250px';
     secondbox.style.display = 'block';
-    container.style.backgroundImage = 'url(../img/activity/sub_bg.jpg)';
+    anibox.style.backgroundColor = 'transparent';
 })
+
+// 스크롤 애니메이션
+
+const intro = document.querySelector('.intro');
+const path2 = document.querySelector('.path2');
+const path2Length = path2.getTotalLength();
+
+path2.style.strokeDasharray = path2Length;
+path2.style.strokeDashoffset = calcoffset(window.innerHeight*0.7, intro, path2Length);
+
+function calcoffset(scrollY, element, length){
+    const ratio = (scrollY - element.offsetTop) / element.offsetHeight;
+    const value = length - (length * ratio)
+    return value < 0 ? 0 : value > length ? length : value;
+}
+
+function pathHandler(){
+    const scrollY = window.scrollY + (window.innerHeight * 0.55);
+    path2.style.strokeDashoffset = calcoffset(scrollY,intro,path2Length);
+}
+
+window.addEventListener('scroll',pathHandler);
