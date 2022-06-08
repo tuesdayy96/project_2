@@ -77,7 +77,7 @@ function calcoffset(scrollY, element, length){
 }
 
 function pathHandler(){
-    const scrollY = window.scrollY + (window.innerHeight * 0.55);
+    const scrollY = window.scrollY + (window.innerHeight * 0.7);
     path2.style.strokeDashoffset = calcoffset(scrollY,intro,path2Length);
 }
 
