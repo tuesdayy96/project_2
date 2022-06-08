@@ -137,7 +137,8 @@ footer{
         text-align: center;
         font-size: 70px;
         padding: 20px;
-        margin: 30px 0;
+        margin-top: 30vh;
+        margin-bottom: 4rem;
     }
     #container .item2 .item2_imgbox{
         width: 100%;
@@ -350,7 +351,8 @@ footer{
         transition: all 0.3s ease-out;
     }
     .about{
-        margin: 40px auto;
+        margin-top: 40vh;
+        margin-bottom: 4rem;
         width: 100%;
         height: 100%;
         display: flex;
@@ -402,6 +404,8 @@ footer{
         height: 100%;
         padding: 20px 0;
         text-align: center;
+        margin-top: 30vh;
+        margin-bottom: 4rem;
     }
     .maps h3{
         margin: 40px auto;
@@ -560,6 +564,8 @@ footer{
         font-size: 70px;
         padding: 2%;
         margin: 3%;
+        margin-top: 30vh;
+        margin-bottom: 4rem;
     }
     #container .item2 .item2_imgbox{
         width: 100%;
@@ -739,7 +745,8 @@ footer{
         transition: all 0.3s ease-out;
     }
     .about{
-        margin: 40px auto;
+        margin-top: 30vh;
+        margin-bottom: 4rem;
         width: 100%;
         height: 100%;
         display: flex;
@@ -787,6 +794,8 @@ footer{
         height: 100%;
         padding: 20px 0;
         text-align: center;
+        margin-top: 30vh;
+        margin-bottom: 4rem;
     }
     .maps h3{
         margin: 40px auto;
@@ -943,7 +952,8 @@ footer{
         text-align: center;
         font-size: 70px;
         padding: 20px;
-        margin: 30px;
+        margin-top: 30vh;
+        margin-bottom: 4rem;
     }
     #container .item2 .item2_imgbox{
         width: 100%;
@@ -1155,7 +1165,8 @@ footer{
         transition: all 0.3s ease-out;
     }
     .about{
-        margin: 40px auto;
+        margin-top: 30vh;
+        margin-bottom: 4rem;
         width: 100%;
         height: 100%;
         display: flex;
@@ -1203,6 +1214,8 @@ footer{
         height: 100%;
         padding: 20px 0;
         text-align: center;
+        margin-top: 30vh;
+        margin-bottom: 4rem;
     }
     .maps h3{
         margin: 40px auto;

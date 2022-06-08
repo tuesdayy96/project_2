@@ -103,7 +103,7 @@ function scrollmove(){
     for(var i=0;i<scroll_item.length;i++){
         if(window.scrollY > scroll_item[i].offsetTop-700){
             scroll_item[i].style.opacity = '1';
-            scroll_item[i].style.marginTop = '100px';
+            scroll_item[i].style.marginTop = '30vh';
             scroll_item[i].style.transition = 'all 0.4s ease';
         } else if(window.innerHeight < scroll_item[i].offsetTop){
             scroll_item[i].style.opacity = '0';

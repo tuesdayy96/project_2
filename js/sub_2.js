@@ -57,6 +57,7 @@ surf.addEventListener('animationend',function(){
     surfer.style.left = '20%';
     book.style.opacity = '1';
     book.style.top = '250px';
+    book.style.right = '10vw';
     secondbox.style.display = 'block';
     anibox.style.backgroundColor = 'transparent';
 })
@@ -72,7 +73,7 @@ path2.style.strokeDashoffset = calcoffset(window.innerHeight*0.7, intro, path2Le
 
 function calcoffset(scrollY, element, length){
     const ratio = (scrollY - element.offsetTop) / element.offsetHeight;
-    const value = length - (length * ratio)
+    const value = length - (length * ratio);
     return value < 0 ? 0 : value > length ? length : value;
 }
 
