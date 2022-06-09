@@ -135,7 +135,7 @@ body{
         width: 40%;
     }
     .text_container .textbox h4{
-        font-size: 5vw;
+        font-size: 4vw;
         white-space: nowrap;
     }
     .text_container .textbox p{
@@ -168,7 +168,7 @@ body{
         position: absolute;
         left: 0;
         top:0;
-        width: 2600px;
+        width: 3000px;
     }
     .slide_inner .slide li{
         width: 450px;
@@ -264,7 +264,7 @@ body{
     }
     .flipCard_back p{
         margin: 10px 0;
-        font-size: 12px;
+        font-size: 16px;
     }
     .flipCard_back span{
         font-size: 20px;
@@ -381,7 +381,7 @@ body{
         position: absolute;
         left: 0;
         top:0;
-        width: 2600px;
+        width: 3900px;
     }
     .slide_inner .slide li{
         width: 600px;
@@ -593,6 +593,7 @@ body{
         position: absolute;
         left: 0;
         top:0;
+        width:6300px;
     }
     .slide_inner .slide li{
         width: 1000px;

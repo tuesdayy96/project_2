@@ -47,57 +47,209 @@ function pathHandler(){
 window.addEventListener('scroll',pathHandler);
 
 // 사이즈 조절
-    var slides = document.querySelector('.slide');
-    var slideImg = document.querySelectorAll('.slide li');
-    var idx = 0;
-    var slideIdx = slideImg.length;
-    var prev_btn = document.getElementById('prev');
-    var next_btn = document.getElementById('next');
-    var s_Width = setInterval(function(){
-        s_Width = $(slideImg[0]).width();
-        // initslide();
-    },1000);
-        s_Margin = 50;
-    makeClone();
-    setInterval(initslide,5000);
-    function makeClone(){
-        let cloneSlide_f = slideImg[0].cloneNode(true);
-        let cloneSlide_l = slides.lastElementChild.cloneNode(true);
-        slides.append(cloneSlide_f);
-        slides.insertBefore(cloneSlide_l, slides.firstElementChild);
-    }
-    function initslide(){
-        slides.style.width = (s_Width + s_Margin) * (slideIdx + 2) + 'px';
-        slides.style.left = -(s_Width + s_Margin) + 'px';
-    }
-    next_btn.addEventListener('click',function(){
-        clearInterval(s_Width);
-        if(idx <= slideIdx - 1){
-            slides.style.left = -(idx + 2) * (s_Width + s_Margin) + 'px';
-            slides.style.transition = '0.5s ease-out';
-        }
-        if(idx === slideIdx - 1 ){
-            setTimeout(function(){
-                slides.style.left = -(s_Width + s_Margin) + 'px';
-                slides.style.transition = '0s ease-out';
-            },500);
-            idx = -1;
-        }
-        idx += 1;
+    // var slides = document.querySelector('.slide');
+    // var slideImg = document.querySelectorAll('.slide li');
+    // var idx = 0;
+    // var slideIdx = slideImg.length;
+    // var prev_btn = document.getElementById('prev');
+    // var next_btn = document.getElementById('next');
+    // var s_Width = $(slideImg[0]).width();
+    //     s_Margin = 50;
+    // makeClone();
+    // initslide();
+    // function makeClone(){
+    //     let cloneSlide_f = slideImg[0].cloneNode(true);
+    //     let cloneSlide_l = slides.lastElementChild.cloneNode(true);
+    //     slides.append(cloneSlide_f);
+    //     slides.insertBefore(cloneSlide_l, slides.firstElementChild);
+    // }
+    // function initslide(){
+    //     slides.style.width = (s_Width + s_Margin) * (slideIdx + 2) + 'px';
+    //     slides.style.left = -(s_Width + s_Margin) + 'px';
+    // }
+    // next_btn.addEventListener('click',function(){
+    //     clearInterval(s_Width);
+    //     if(idx <= slideIdx - 1){
+    //         slides.style.left = -(idx + 2) * (s_Width + s_Margin) + 'px';
+    //         slides.style.transition = '0.5s ease-out';
+    //     }
+    //     if(idx === slideIdx - 1 ){
+    //         setTimeout(function(){
+    //             slides.style.left = -(s_Width + s_Margin) + 'px';
+    //             slides.style.transition = '0s ease-out';
+    //         },500);
+    //         idx = -1;
+    //     }
+    //     idx += 1;
         
-    })
-        prev_btn.addEventListener('click',function(){
-            clearInterval(s_Width);
-        if(idx >=0){
-            slides.style.left = -idx * (s_Width + s_Margin) + 'px';
-            slides.style.transition = '0.5s ease-out';
-        }
-        if(idx === 0){
-            setTimeout(function(){
-                slides.style.left = -slideIdx * (s_Width + s_Margin) + 'px';
-                slides.style.transition = 'all 0s ease-out';
-            },500);
-            idx = slideIdx;
-        }
-        idx -=1; 
-    })
+    // })
+    //     prev_btn.addEventListener('click',function(){
+    //         clearInterval(s_Width);
+    //     if(idx >=0){
+    //         slides.style.left = -idx * (s_Width + s_Margin) + 'px';
+    //         slides.style.transition = '0.5s ease-out';
+    //     }
+    //     if(idx === 0){
+    //         setTimeout(function(){
+    //             slides.style.left = -slideIdx * (s_Width + s_Margin) + 'px';
+    //             slides.style.transition = 'all 0s ease-out';
+    //         },500);
+    //         idx = slideIdx;
+    //     }
+    //     idx -=1; 
+    // })
+
+
+
+// mediaSize();
+// function mediaSize(){
+//     if(window.matchMedia("(max-width: 600px)").matches){
+//             var slides = document.querySelector('.slide');
+//             var slideImg = document.querySelectorAll('.slide li');
+//             var idx = 0;
+//             var slideIdx = slideImg.length;
+//             var prev_btn = document.getElementById('prev');
+//             var next_btn = document.getElementById('next');
+//             var s_Width = 450;
+//                 s_Margin = 50;
+//         makeClone();
+//         // initslide();
+//         function makeClone(){
+//             let cloneSlide_f = slideImg[0].cloneNode(true);
+//             let cloneSlide_l = slides.lastElementChild.cloneNode(true);
+//             slides.append(cloneSlide_f);
+//             slides.insertBefore(cloneSlide_l, slides.firstElementChild);
+//         }
+//         // function initslide(){
+//         //     slides.style.width = (s_Width + s_Margin) * (slideIdx + 2) + 'px';
+//         //     slides.style.left = -(s_Width + s_Margin) + 'px';
+//         // }
+        
+//         next_btn.addEventListener('click',function(){
+//             if(idx <= slideIdx - 1){
+//                 slides.style.left = -(idx + 2) * (s_Width + s_Margin) + 'px';
+//                 slides.style.transition = '0.5s ease-out';
+//             }
+//             if(idx === slideIdx - 1 ){
+//                 setTimeout(function(){
+//                     slides.style.left = -(s_Width + s_Margin) + 'px';
+//                     slides.style.transition = '0s ease-out';
+//                 },500);
+//                 idx = -1;
+//             }
+//             idx += 1;
+//         })
+//         prev_btn.addEventListener('click',function(){
+//             if(idx >=0){
+//                 slides.style.left = -idx * (s_Width + s_Margin) + 'px';
+//                 slides.style.transition = '0.5s ease-out';
+//             }
+//             if(idx === 0){
+//                 setTimeout(function(){
+//                     slides.style.left = -slideIdx * (s_Width + s_Margin) + 'px';
+//                     slides.style.transition = 'all 0s ease-out';
+//                 },500);
+//                 idx = slideIdx;
+//             }
+//             idx -=1; 
+//         })
+//     } else if (window.matchMedia("(min-width: 601px) and (max-width: 1259px)").matches){
+//         var slides = document.querySelector('.slide');
+//             var slideImg = document.querySelectorAll('.slide li');
+//             var idx = 0;
+//             var slideIdx = slideImg.length;
+//             var prev_btn = document.getElementById('prev');
+//             var next_btn = document.getElementById('next');
+//             var s_Width = 600;
+//                 s_Margin = 50;
+//             makeClone();
+//             // initslide();
+//         function makeClone(){
+//             let cloneSlide_f = slideImg[0].cloneNode(true);
+//             let cloneSlide_l = slides.lastElementChild.cloneNode(true);
+//             slides.append(cloneSlide_f);
+//             slides.insertBefore(cloneSlide_l, slides.firstElementChild);
+//         }
+//         // function initslide(){
+//         //     slides.style.width = (s_Width + s_Margin) * (slideIdx + 2) + 'px';
+//         //     slides.style.left = -(s_Width + s_Margin) + 'px';
+//         // }
+//         next_btn.addEventListener('click',function(){
+//             if(idx <= slideIdx - 1){
+//                 slides.style.left = -(idx + 2) * (s_Width + s_Margin) + 'px';
+//                 slides.style.transition = '0.5s ease-out';
+//             }
+//             if(idx === slideIdx - 1 ){
+//                 setTimeout(function(){
+//                     slides.style.left = -(s_Width + s_Margin) + 'px';
+//                     slides.style.transition = '0s ease-out';
+//                 },500);
+//                 idx = -1;
+//             }
+//             idx += 1;
+//         })
+//         prev_btn.addEventListener('click',function(){
+//             if(idx >=0){
+//                 slides.style.left = -idx * (s_Width + s_Margin) + 'px';
+//                 slides.style.transition = '0.5s ease-out';
+//             }
+//             if(idx === 0){
+//                 setTimeout(function(){
+//                     slides.style.left = -slideIdx * (s_Width + s_Margin) + 'px';
+//                     slides.style.transition = 'all 0s ease-out';
+//                 },500);
+//                 idx = slideIdx;
+//             }
+//             idx -=1; 
+//         })
+//     } else if(window.matchMedia("(min-width: 1260px)").matches){
+//         var slides = document.querySelector('.slide');
+//             var slideImg = document.querySelectorAll('.slide li');
+//             var idx = 0;
+//             var slideIdx = slideImg.length;
+//             var prev_btn = document.getElementById('prev');
+//             var next_btn = document.getElementById('next');
+//             var s_Width = 1000;
+//             var s_Margin = 50;
+//             makeClone();
+//             // initslide();
+//         function makeClone(){
+//             let cloneSlide_f = slideImg[0].cloneNode(true);
+//             let cloneSlide_l = slides.lastElementChild.cloneNode(true);
+//             slides.append(cloneSlide_f);
+//             slides.insertBefore(cloneSlide_l, slides.firstElementChild);
+//         }
+//         // function initslide(){
+//         //     slides.style.width = (s_Width + s_Margin) * (slideIdx + 2) + 'px';
+//         //     slides.style.left = -(s_Width + s_Margin) + 'px';
+//         // }
+//         next_btn.addEventListener('click',function(){
+//             if(idx <= slideIdx - 1){
+//                 slides.style.left = -(idx + 2) * (s_Width + s_Margin) + 'px';
+//                 slides.style.transition = '0.5s ease-out';
+//             }
+//             if(idx === slideIdx - 1 ){
+//                 setTimeout(function(){
+//                     slides.style.left = -(s_Width + s_Margin) + 'px';
+//                     slides.style.transition = '0s ease-out';
+//                 },500);
+//                 idx = -1;
+//             }
+//             idx += 1;
+//         })
+//         prev_btn.addEventListener('click',function(){
+//             if(idx >=0){
+//                 slides.style.left = -idx * (s_Width + s_Margin) + 'px';
+//                 slides.style.transition = '0.5s ease-out';
+//             }
+//             if(idx === 0){
+//                 setTimeout(function(){
+//                     slides.style.left = -slideIdx * (s_Width + s_Margin) + 'px';
+//                     slides.style.transition = 'all 0s ease-out';
+//                 },500);
+//                 idx = slideIdx;
+//             }
+//             idx -=1; 
+//         })
+//     }
+// }
