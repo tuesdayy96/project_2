@@ -92,210 +92,639 @@ body{
     box-shadow: none;
     transform: translate(2px,2px);
 }
-#secondbox{
-    display: none;
-}
-#secondbox h3{
-    text-align: center;
-    color: #fff;
-    font-size: 4rem;
-    margin-top: 50vh;
-    margin-bottom: 4rem;
-}
-#section1{
-    position: relative;
-    width: 1140px;
-    height: 100%;
-    padding: 20px;
-    margin: 20px auto;
-    background-color: rgba(255,255,255,0.5);
-}
-#section1 svg{
-    width: 100%;
-    height: 100%;
-}
-#section1 .path2{
-    fill: none;
-    stroke: #000;
-}
-#section1 .text_container{
-    position: absolute;
-    top:0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-color: transparent;
-}
 .text_container .textbox{
-    position: absolute;
-    width: 450px;
+    transition: all 0.3s ease;
 }
-.text_container .textbox h4{
-    font-size: 3rem;
-    white-space: nowrap;
+@media screen and (max-width:600px) {
+    #secondbox{
+        display: none;
+    }
+    #secondbox h3{
+        text-align: center;
+        color: #fff;
+        font-size: 4rem;
+        margin-top: 25vh;
+        margin-bottom: 4rem;
+    }
+    #section1{
+        position: relative;
+        width: 90%;
+        height: 100%;
+        padding: 20px;
+        margin: 20px auto;
+        background-color: rgba(255,255,255,0.5);
+    }
+    #section1 svg{
+        width: 100%;
+        height: 100%;
+    }
+    #section1 .path2{
+        fill: none;
+        stroke: #000;
+    }
+    #section1 .text_container{
+        position: absolute;
+        top:0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: transparent;
+    }
+    .text_container .textbox{
+        position: absolute;
+        width: 40%;
+    }
+    .text_container .textbox h4{
+        font-size: 5vw;
+        white-space: nowrap;
+    }
+    .text_container .textbox p{
+        font-size: 1.5vw;
+        margin-top: 10px;
+    }
+    .txt1{top:18%;left: 5vw; text-align: right;}
+    .txt2{top:38%;right: 5vw; text-align: left;}
+    #boys{font-weight: 550;border-bottom: 1px solid #ddd;}
+    .txt2 span{font-size: 1.5vw;}
+    .txt3{top:52%;left: 5vw; text-align: right;}
+    #safetyRule{font-size:1vw;}
+    .txt3 a{text-decoration: underline;color:blue;}
+    .txt4{top:85%;right: 15vw; text-align: left;}
+    #section2{
+        width: 100%;
+        height: 500px;
+        margin: 0px auto;
+    }
+    .slide_inner{
+        width: 500px;
+        height: 300px;
+        position: relative;
+        bottom: 0;
+        left: 0;
+        margin: 0px auto;
+        overflow: hidden;
+    }
+    .slide_inner .slide{
+        position: absolute;
+        left: 0;
+        top:0;
+        width: 2600px;
+    }
+    .slide_inner .slide li{
+        width: 450px;
+        height: 300px;
+        float: left;
+    }
+    .slide_inner .slide li:first-child{
+        margin-left:  25px;
+    }
+    .slide_inner .slide li:not(:last-child){
+        margin-right: 50px;
+    }
+    .slide_inner .slide li img{
+        width: 100%;
+        height: 100%;
+        transition: all 0.5s linear;
+    }
+    .btn_control span{
+        position: absolute;
+        display: block;
+        text-align: center;
+        font-size: 40px;
+        background-color: transparent;
+        border-radius: 25%;
+        width: 60px;
+        height: 60px;
+        box-sizing: border-box;
+        transition: all 0.2s linear;
+        cursor: pointer;
+        top:50%;
+        user-select: none;
+    }
+    .btn_control span:hover{
+        color:#fff;  
+        background-color: black;
+    }
+    .btn_control #prev{
+        left: 0px;
+    }
+    .btn_control #prev:hover{
+        transform: translate(-10px);
+    }
+    .btn_control #next{
+        right: 0px;
+    }
+    .btn_control #next:hover{
+        transform: translate(10px);
+    }
+    .profile{
+        width: 80%;
+        height: 100%;
+        margin: 0 auto;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+    }
+    .profile .flipCard{
+        width: 100%;
+        height: 400px;
+        background-color: transparent;
+        perspective: 1000px;
+        margin: 20px 0;
+    }
+    .profile .flipCard .flipCard_inner{
+        position: relative;
+        width: 100%;
+        height: 100%;
+        text-align: center;
+        transition: transform 0.6s;
+        transform-style: preserve-3d;
+        box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+    }
+    .flipCard:hover .flipCard_inner{
+        transform: rotateY(180deg);
+    }
+    .flipCard_front, .flipCard_back{
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        -webkit-backface-visibility: hidden;
+        backface-visibility: hidden;
+    }
+    .flipCard_front{
+        background-color: #bbb;
+        color:#000;
+    }
+    .flipCard_back{
+        background-color: #f0ffff;
+        color:#333;
+        transform: rotateY(180deg);
+        padding: 10px;
+        box-sizing: border-box;
+    }
+    .flipCard_back p{
+        margin: 10px 0;
+        font-size: 12px;
+    }
+    .flipCard_back span{
+        font-size: 20px;
+    }
+    .profile .flipCard_front img{
+        width: 100%;
+        height: 400px;
+    }
+    #section4{
+        padding-bottom: 10vh;
+    }
+    .other{
+        width: 100%;
+        height: 100%;
+        display: flex;
+        flex-wrap: wrap;
+    }
+    .other1, .other2{
+        width: 100%;
+        height: 100%;
+        border:2px solid #333;
+    }
+    .other1{
+        background-image: url(../img/yacht1.jpg);
+        background-position: center;
+        background-size: cover;
+    }
+    .other2{
+        background-image: url(../img/activity/snokel.jpg);
+        background-position: center;
+        background-size: cover;
+    }
+    .otherbox{
+        width: 100%;
+        height: 100%;
+        background-color: rgba(100,100,100,0.5);
+    }
+    .otherbox h4{
+        font-size: 5rem;
+        color: #fff;
+        padding: 20px;
+    }
 }
-.text_container .textbox p{
-    font-size: 2rem;
-    margin-top: 10px;
+@media (min-width:601px) and (max-width:1259px) {
+    #secondbox{
+        display: none;
+    }
+    #secondbox h3{
+        text-align: center;
+        color: #fff;
+        font-size: 4rem;
+        margin-top: 25vh;
+        margin-bottom: 4rem;
+    }
+    #section1{
+        position: relative;
+        width: 90%;
+        height: 100%;
+        padding: 20px;
+        margin: 20px auto;
+        background-color: rgba(255,255,255,0.5);
+    }
+    #section1 svg{
+        width: 100%;
+        height: 100%;
+    }
+    #section1 .path2{
+        fill: none;
+        stroke: #000;
+    }
+    #section1 .text_container{
+        position: absolute;
+        top:0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: transparent;
+    }
+    .text_container .textbox{
+        position: absolute;
+        width: 40%;
+    }
+    .text_container .textbox h4{
+        font-size: 5vw;
+        white-space: nowrap;
+    }
+    .text_container .textbox p{
+        font-size: 2vw;
+        margin-top: 10px;
+    }
+    .txt1{top:20%;left: 5vw; text-align: right;}
+    .txt2{top:40%;right: 5vw; text-align: left;}
+    #boys{font-weight: 550;border-bottom: 1px solid #ddd;}
+    .txt2 span{font-size: 1.5vw;}
+    .txt3{top:55%;left: 5vw; text-align: right;}
+    #safetyRule{font-size:1vw;}
+    .txt3 a{text-decoration: underline;color:blue;}
+    .txt4{top:85%;right: 15vw; text-align: left;}
+    #section2{
+        width: 100%;
+        height: 600px;
+        margin: 0px auto;
+    }
+    .slide_inner{
+        width: 650px;
+        height: 450px;
+        position: relative;
+        bottom: 0;
+        left: 0;
+        margin: 0px auto;
+        overflow: hidden;
+    }
+    .slide_inner .slide{
+        position: absolute;
+        left: 0;
+        top:0;
+        width: 2600px;
+    }
+    .slide_inner .slide li{
+        width: 600px;
+        height: 450px;
+        margin: 0 auto;
+        float: left;
+    }
+    .slide_inner .slide li:first-child{
+        margin-left:  25px;
+    }
+    .slide_inner .slide li:not(:last-child){
+        margin-right: 50px;
+    }
+    .slide_inner .slide li img{
+        width: 100%;
+        height: 100%;
+        transition: all 0.5s linear;
+    }
+    .btn_control span{
+        position: absolute;
+        display: block;
+        text-align: center;
+        font-size: 40px;
+        background-color: transparent;
+        border-radius: 25%;
+        width: 60px;
+        height: 60px;
+        box-sizing: border-box;
+        transition: all 0.2s linear;
+        cursor: pointer;
+        top:50%;
+        user-select: none;
+    }
+    .btn_control span:hover{
+        color:#fff;  
+        background-color: black;
+    }
+    .btn_control #prev{
+        left: 0px;
+    }
+    .btn_control #prev:hover{
+        transform: translate(-10px);
+    }
+    .btn_control #next{
+        right: 0px;
+    }
+    .btn_control #next:hover{
+        transform: translate(10px);
+    }
+    .profile{
+        width: 600px;
+        height: 900px;
+        margin: auto;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        align-items: center;
+    }
+    .profile .flipCard{
+        width: 250px;
+        height: 400px;
+        background-color: transparent;
+        perspective: 1000px;
+    }
+    .profile .flipCard .flipCard_inner{
+        position: relative;
+        width: 100%;
+        height: 100%;
+        text-align: center;
+        transition: transform 0.6s;
+        transform-style: preserve-3d;
+        box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+    }
+    .flipCard:hover .flipCard_inner{
+        transform: rotateY(180deg);
+    }
+    .flipCard_front, .flipCard_back{
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        -webkit-backface-visibility: hidden;
+        backface-visibility: hidden;
+    }
+    .flipCard_front{
+        background-color: #bbb;
+        color:#000;
+    }
+    .flipCard_back{
+        background-color: #f0ffff;
+        color:#333;
+        transform: rotateY(180deg);
+        padding: 10px;
+        box-sizing: border-box;
+    }
+    .flipCard_back p{
+        margin: 10px 0;
+        font-size: 12px;
+    }
+    .flipCard_back span{
+        font-size: 20px;
+    }
+    .profile .flipCard_front img{
+        width: 100%;
+        height: 400px;
+    }
+    #section4{
+        padding-bottom: 10vh;
+    }
+    .other{
+        width: 100%;
+        height: 600px;
+        display: flex;
+    }
+    .other1, .other2{
+        width: 100%;
+        height: 100%;
+        border:2px solid #333;
+    }
+    .other1{
+        background-image: url(../img/yacht1.jpg);
+        background-position: center;
+        background-size: cover;
+    }
+    .other2{
+        background-image: url(../img/activity/snokel.jpg);
+        background-position: center;
+        background-size: cover;
+    }
+    .otherbox{
+        width: 100%;
+        height: 100%;
+        background-color: rgba(100,100,100,0.5);
+    }
+    .otherbox h4{
+        font-size: 5rem;
+        color: #fff;
+        padding: 20px;
+    }
 }
-.txt1{top:400px;left: 100px; text-align: right;}
-.txt2{top:900px;right: 100px; text-align: left;}
-#boys{font-weight: 550;border-bottom: 1px solid #ddd;}
-.txt3{top:1300px;left: 100px; text-align: right;}
-.txt3 a{
-    text-decoration: underline;
-    color:blue;
-}
-.txt4{top:2000px;right: 100px; text-align: left;}
-#section2{
-    width: 100%;
-    height: 600px;
-    margin: 0px auto;
-}
-.slide_inner{
-    width: 650px;
-    height: 450px;
-    position: relative;
-    bottom: 0;
-    left: 0;
-    margin: 0px auto;
-    overflow: hidden;
-}
-.slide_inner .slide{
-    position: absolute;
-    left: 0;
-    top:0;
-    width: 2600px;
-}
-.slide_inner .slide li{
-    width: 600px;
-    height: 450px;
-    float: left;
-}
-.slide_inner .slide li:first-child{
-    margin-left:  25px;
-}
-.slide_inner .slide li:not(:last-child){
-    margin-right: 50px;
-}
-.slide_inner .slide li img{
-    width: 100%;
-    height: 100%;
-    transition: all 0.5s linear;
-}
-.btn_control span{
-    position: absolute;
-    display: block;
-    text-align: center;
-    font-size: 40px;
-    background-color: transparent;
-    border-radius: 25%;
-    width: 60px;
-    height: 60px;
-    box-sizing: border-box;
-    transition: all 0.2s linear;
-    cursor: pointer;
-    top:50%;
-    user-select: none;
-}
-.btn_control span:hover{
-    color:#fff;  
-    background-color: black;
-}
-.btn_control #prev{
-    left: 0px;
-}
-.btn_control #prev:hover{
-    transform: translate(-10px);
-}
-.btn_control #next{
-    right: 0px;
-}
-.btn_control #next:hover{
-    transform: translate(10px);
-}
-.profile{
-    width: 1140px;
-    margin: 0 auto;
-    display: flex;
-    justify-content: space-between;
-}
-.profile .flipCard{
-    width: 250px;
-    height: 400px;
-    background-color: transparent;
-    perspective: 1000px;
-}
-.profile .flipCard .flipCard_inner{
-    position: relative;
-    width: 100%;
-    height: 100%;
-    text-align: center;
-    transition: transform 0.6s;
-    transform-style: preserve-3d;
-    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
-}
-.flipCard:hover .flipCard_inner{
-    transform: rotateY(180deg);
-}
-.flipCard_front, .flipCard_back{
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    -webkit-backface-visibility: hidden;
-    backface-visibility: hidden;
-}
-.flipCard_front{
-    background-color: #bbb;
-    color:#000;
-}
-.flipCard_back{
-    background-color: #f0ffff;
-    color:#333;
-    transform: rotateY(180deg);
-    padding: 10px;
-}
-.flipCard_back p{
-    margin: 10px 0;
-    font-size: 12px;
-}
-.flipCard_back span{
-    font-size: 20px;
-}
-.profile .flipCard_front img{
-    width: 100%;
-    height: 400px;
-}
-#section4{
-    padding: 10vh 0;
-}
-.other{
-    width: 100%;
-    height: 600px;
-    display: flex;
-}
-.other1, .other2{
-    width: 100%;
-    height: 100%;
-    border:2px solid #333;
-}
-.other1{
-    background-image: url(../img/yacht1.jpg);
-    background-position: center;
-    background-size: cover;
-}
-.other2{
-    background-image: url(../img/activity/snokel.jpg);
-    background-position: center;
-    background-size: cover;
-}
-.otherbox{
-    width: 100%;
-    height: 100%;
-    background-color: rgba(100,100,100,0.5);
-}
-.otherbox h4{
-    font-size: 5rem;
-    color: #fff;
-    padding: 20px;
+@media screen and (min-width:1260px) {
+    #secondbox{
+        display: none;
+    }
+    #secondbox h3{
+        text-align: center;
+        color: #fff;
+        font-size: 4rem;
+        margin-top: 25vh;
+        margin-bottom: 4rem;
+    }
+    #section1{
+        position: relative;
+        width: 1140px;
+        height: 100%;
+        padding: 20px;
+        margin: 20px auto;
+        background-color: rgba(255,255,255,0.5);
+    }
+    #section1 svg{
+        width: 100%;
+        height: 100%;
+    }
+    #section1 .path2{
+        fill: none;
+        stroke: #000;
+    }
+    #section1 .text_container{
+        position: absolute;
+        top:0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: transparent;
+    }
+    .text_container .textbox{
+        position: absolute;
+        width: 450px;
+    }
+    .text_container .textbox h4{
+        font-size: 3rem;
+        white-space: nowrap;
+    }
+    .text_container .textbox p{
+        font-size: 2rem;
+        margin-top: 10px;
+    }
+    .txt1{top:400px;left: 100px; text-align: right;}
+    .txt2{top:900px;right: 100px; text-align: left;}
+    #boys{font-weight: 550;border-bottom: 1px solid #ddd;}
+    .txt3{top:1300px;left: 100px; text-align: right;}
+    #safetyRule{font-size: 16px;}
+    .txt3 a{text-decoration: underline;color:blue;}
+    .txt4{top:2000px;right: 100px; text-align: left;}
+    #section2{
+        width: 100%;
+        height: 600px;
+        margin: 0px auto;
+    }
+    .slide_inner{
+        width: 1050px;
+        height: 600px;
+        position: relative;
+        bottom: 0;
+        left: 0;
+        margin: 0px auto;
+        overflow: hidden;
+    }
+    .slide_inner .slide{
+        position: absolute;
+        left: 0;
+        top:0;
+    }
+    .slide_inner .slide li{
+        width: 1000px;
+        height: 600px;
+        float: left;
+    }
+    .slide_inner .slide li:first-child{
+        margin-left:  25px;
+    }
+    .slide_inner .slide li:not(:last-child){
+        margin-right: 50px;
+    }
+    .slide_inner .slide li img{
+        width: 100%;
+        height: 100%;
+        transition: all 0.5s linear;
+    }
+    .btn_control span{
+        position: absolute;
+        display: block;
+        text-align: center;
+        font-size: 40px;
+        background-color: transparent;
+        border-radius: 25%;
+        width: 60px;
+        height: 60px;
+        box-sizing: border-box;
+        transition: all 0.2s linear;
+        cursor: pointer;
+        top:50%;
+        user-select: none;
+    }
+    .btn_control span:hover{
+        color:#fff;  
+        background-color: black;
+    }
+    .btn_control #prev{
+        left: 0px;
+    }
+    .btn_control #prev:hover{
+        transform: translate(-10px);
+    }
+    .btn_control #next{
+        right: 0px;
+    }
+    .btn_control #next:hover{
+        transform: translate(10px);
+    }
+    .profile{
+        width: 1140px;
+        margin: 0 auto;
+        display: flex;
+        justify-content: space-between;
+    }
+    .profile .flipCard{
+        width: 250px;
+        height: 400px;
+        background-color: transparent;
+        perspective: 1000px;
+    }
+    .profile .flipCard .flipCard_inner{
+        position: relative;
+        width: 100%;
+        height: 100%;
+        text-align: center;
+        transition: transform 0.6s;
+        transform-style: preserve-3d;
+        box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+    }
+    .flipCard:hover .flipCard_inner{
+        transform: rotateY(180deg);
+    }
+    .flipCard_front, .flipCard_back{
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        -webkit-backface-visibility: hidden;
+        backface-visibility: hidden;
+    }
+    .flipCard_front{
+        background-color: #bbb;
+        color:#000;
+    }
+    .flipCard_back{
+        background-color: #f0ffff;
+        color:#333;
+        transform: rotateY(180deg);
+        padding: 10px;
+        box-sizing: border-box;
+    }
+    .flipCard_back p{
+        margin: 10px 0;
+        font-size: 12px;
+    }
+    .flipCard_back span{
+        font-size: 20px;
+    }
+    .profile .flipCard_front img{
+        width: 100%;
+        height: 400px;
+    }
+    #section4{
+        padding-bottom: 10vh;
+    }
+    .other{
+        width: 100%;
+        height: 600px;
+        display: flex;
+    }
+    .other1, .other2{
+        width: 100%;
+        height: 100%;
+        border:2px solid #333;
+    }
+    .other1{
+        background-image: url(../img/yacht1.jpg);
+        background-position: center;
+        background-size: cover;
+    }
+    .other2{
+        background-image: url(../img/activity/snokel.jpg);
+        background-position: center;
+        background-size: cover;
+    }
+    .otherbox{
+        width: 100%;
+        height: 100%;
+        background-color: rgba(100,100,100,0.5);
+    }
+    .otherbox h4{
+        font-size: 5rem;
+        color: #fff;
+        padding: 20px;
+    }       
 }
