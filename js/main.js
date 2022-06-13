@@ -8,21 +8,18 @@ function closebtn(){
 }
 
 var ft = document.querySelector('footer');
+var topbtn = document.getElementById('topbtn');
 function scroll_top(){
     if(window.scrollY >= 940){
-        topbtn.style.opacity = '1';
-        topbtn.style.transition = 'all 1s ease';
+        topbtn.classList.add('on');
         if(window.scrollY >= (ft.offsetTop - window.outerHeight)){
-                topbtn.style.opacity = '0';
-                topbtn.style.transition = 'all 1s ease';
+            topbtn.classList.remove('on');
         }
     } else {
-        topbtn.style.opacity = '0';
-        topbtn.style.transition = 'all 1s ease';
-    }
-    
+        topbtn.classList.remove('on');
+    }s  
 }
-function scrolltotop(){
+function scrolltoTop(){
    window.scrollTo({top:0,left:0,behavior:'smooth'});
 }
 window.addEventListener('scroll',scroll_top);
