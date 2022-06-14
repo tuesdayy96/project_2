@@ -5,10 +5,10 @@ var surfer = document.querySelector('.surfer');
     var anibox = document.querySelector('.animate') 
 surf.addEventListener('animationend',function(){
         anibox.style.display = 'flex';
-        surfer.style.position = 'static';
-        surfer.style.transform = 'translate(0,0)';
+        surfer.style.position = 'absolute';
+        surfer.style.transform = 'translate(-37%,-50%)';
         book.style.position = 'static';
-        book.style.transform = 'translateX(-25vw)'
+        book.style.transform = 'translateX(-5vw)'
         book.style.opacity = '1';
         secondbox.style.display = 'block';
         anibox.style.backgroundColor = 'transparent';
